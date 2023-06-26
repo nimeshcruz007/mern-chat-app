@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug React App",
+        "type": "chrome",
+        "request": "launch",
+        "url":"http://localhost:3000",
+        "webRoot": "${workspaceFolder}/frontend/src",
+        "sourceMapPathOverrides": {
+          "webpack:///./~/*": "${workspaceFolder}/node_modules/*",
+          "webpack:///src/*": "${webRoot}/*"
+        }
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Node.js Program",
+        "program": "${workspaceFolder}/backend/server.js",
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+  }
